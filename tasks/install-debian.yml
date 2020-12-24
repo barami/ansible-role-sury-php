@@ -19,3 +19,4 @@
   apt:
     name: '{{ php_packages }}'
     state: present
+  register: sury_installed
