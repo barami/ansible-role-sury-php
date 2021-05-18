@@ -1,7 +1,7 @@
 galaxy_info:
   role_name: sury-php
   author: barami
-  description: Install and configuration for php from deb.sury.php 
+  description: Install deb.sury.php repository for php
 
   license: BSD-3-Clause
 
@@ -11,8 +11,16 @@ galaxy_info:
     - name: Debian
       versions:
         - buster
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+        - focal
+        - groovy
+        - hirsute
 
   galaxy_tags:
     - php
+    - sury
 
 dependencies: []

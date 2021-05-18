@@ -1,0 +1,21 @@
+---
+- name: 'SURY: Install dependencies'
+  apt:
+    pkg:
+      - apt-transport-https
+      - lsb-release
+      - ca-certificates
+      - curl
+      - gnupg
+    update_cache: True
+
+- name: 'SURY: Install GPG key'
+  apt_key:
+    url: https://packages.sury.org/php/apt.gpg
+    state: present
+
+- name: 'SURY: Add sury repository'
+  apt_repository:
+    repo: "deb https://packages.sury.org/php {{ ansible_facts['distribution_release'] }} main"
+    filename: sury-php
+    update_cache: True
