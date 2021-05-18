@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: sury_php
   author: barami
   description: Install deb.sury.php repository for php
 
